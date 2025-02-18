@@ -36,7 +36,7 @@ HomeMade is a web application enabling users to order dishes prepared by renowne
 1. **Run project**
 ```sh
 git clone https://github.com/RubnK/homemade-vuejs.git
-cd home-made-app
+cd homemade-vuejs
 ```
 2. **Install dependencies
 ```sh
