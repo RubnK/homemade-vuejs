@@ -6,6 +6,7 @@
             Découvrez une sélection de plats préparés avec passion par nos chefs talentueux. <br>
             Chez HomeMade, nous mettons à l’honneur le goût du fait-maison, avec des recettes savoureuses, des ingrédients de qualité et une expérience simple et agréable.
         </p>
+        <router-link class="button" to="/chefs">Découvrir nos chefs</router-link>
         <p>
             👨‍🍳 Choisissez votre chef préféré<br>
             🥗 Commandez des plats faits avec amour<br>

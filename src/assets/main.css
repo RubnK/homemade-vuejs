@@ -81,6 +81,11 @@ ul li a {
   font-size: 1.2em;
   width: 97%;
   padding: 15px;
+  transition: all 0.3s;
+}
+
+ul li a:hover {
+  background-color: #f4f4f4;
 }
 
 .quantity{
@@ -88,7 +93,7 @@ ul li a {
 }
 
 /* Buttons */
-button {
+button, .button {
   background-color: #007bff;
   color: white;
   border: none;
@@ -98,9 +103,10 @@ button {
   font-size: 1em;
   transition: 0.3s;
   margin: 5px;
+  text-decoration: none;
 }
 
-button:hover {
+button:hover, .button:hover {
   background-color: #0056b3;
 }
 
