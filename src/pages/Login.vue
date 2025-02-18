@@ -7,33 +7,33 @@
         <button type="submit">Se connecter</button>
       </form>
       <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
-      <router-link to="/register">Créer un compte</router-link>
+      <router-link to="/register">Pas encore de compte ? Inscrivez-vous</router-link>
     </div>
   </template>
   
-  <script>
-  import { ref } from 'vue';
-  import { useAuthStore } from '../stores/auth';
-  import { useRouter } from 'vue-router';
+<script>
+    import { ref } from 'vue';
+    import { useAuthStore } from '../stores/auth';
+    import { useRouter } from 'vue-router';
   
-  export default {
-    setup() {
-      const email = ref('');
-      const password = ref('');
-      const errorMessage = ref('');
-      const authStore = useAuthStore();
-      const router = useRouter();
+    export default {
+        setup() {
+            const email = ref('');
+            const password = ref('');
+            const errorMessage = ref('');
+            const authStore = useAuthStore();
+            const router = useRouter();
   
-      const handleLogin = () => {
-        if (authStore.login(email.value, password.value)) {
-          router.push('/');
-        } else {
-          errorMessage.value = "Email ou mot de passe incorrect.";
+            const handleLogin = () => {
+                if (authStore.login(email.value, password.value)) {
+                    router.push('/');
+                } else {
+                    errorMessage.value = "Email ou mot de passe incorrect.";
+                }
+            };
+  
+            return { email, password, handleLogin, errorMessage };
         }
-      };
-  
-      return { email, password, handleLogin, errorMessage };
-    }
-  };
-  </script>
+    };
+</script>
   

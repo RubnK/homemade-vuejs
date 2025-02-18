@@ -12,6 +12,14 @@ header {
   background-color: #222;
   padding: 15px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header h1 {
+  color: white;
+  margin: 0;
 }
 
 nav {
@@ -106,6 +114,11 @@ table {
   margin: 20px auto;
 }
 
+.home{
+  width: 70%;
+  margin: auto;
+}
+
 /* Forms */
 form {
   display: flex;
@@ -142,5 +155,8 @@ input:focus {
   nav {
       flex-direction: column;
       gap: 10px;
+  }
+  header{
+      flex-direction: column;
   }
 }
