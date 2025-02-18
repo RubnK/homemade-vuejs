@@ -1,29 +1,56 @@
-# homemade-app
+# HomeMade - Food Ordering Web Application
 
-This template should help get you started developing with Vue 3 in Vite.
+**Author : [@RubnK](https://github.com/RubnK)**
 
-## Recommended IDE Setup
+HomeMade is a web application enabling users to order dishes prepared by renowned chefs. The application features intuitive navigation, an authentication system and a personalized shopping cart for each user.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
+- **Registration and Login**: Account creation and authentication.
+- **Chef List**: View available chefs and their specialties.
+- **Basket**: Basket management with data persistence.
+- **Data**: Authentication and sessions stored locally.
+- **Responsive design**: Interface optimized for mobile and desktop.
 
-## Customize configuration
+## Technologies used
+- Vue.js 3
+- Vue Router
+- Pinia Pinia (Status management)
+- LocalStorage (Data persistence)
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Project structure
+```
+/home-made-app
+│── src
+│   │── assets/         # Fichiers CSS et images
+│   │── components/     # Composants réutilisables (Header, Footer, Cart...)
+│   │── pages/         # Pages principales de l'application
+│   │── stores/        # Stores Pinia (gestion des utilisateurs et du panier)
+│   │── App.vue        # Composant racine
+│   │── main.js        # Entrée principale de l'application
+│── public/            # Fichiers statiques
+│── README.md          # Documentation du projet
+│── package.json       # Dépendances et scripts npm
+```
 
-## Project Setup
-
+## Installation and Execution
+1. **Run project**
+```sh
+git clone https://github.com/RubnK/homemade-vuejs.git
+cd home-made-app
+```
+2. **Install dependencies
 ```sh
 npm install
 ```
-
-### Compile and Hot-Reload for Development
-
+3. **Start development server**
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Additional configuration
+- To modify global styles, edit the `src/assets/style.css` file.
+- To manage users, see `src/stores/auth.js`.
+- To manage the shopping cart, see `src/stores/cart.js`.
 
-```sh
-npm run build
-```
+## License
+This project is licensed under the MIT License.
