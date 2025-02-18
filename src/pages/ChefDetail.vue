@@ -24,6 +24,7 @@
     import { useRoute } from 'vue-router';
     import { useCartStore } from '../stores/cart';
     import { useAuthStore } from '../stores/auth';
+    import { chefsData } from '../data/chefs';
   
     export default {
         props: ['id'],
@@ -35,11 +36,7 @@
         const authStore = useAuthStore();
   
         onMounted(() => {
-            const chefsData = {
-                1: { name: 'Chef Pierre', dishes: [{ id: 1, name: 'Risotto' }, { id: 2, name: 'Pâtes Carbonara' }] },
-                2: { name: 'Chef Marie', dishes: [{ id: 3, name: 'Boeuf Bourguignon' }, { id: 4, name: 'Gratin Dauphinois' }] }
-            };
-            chef.value = chefsData[route.params.id] || { name: 'Chef Inconnu', dishes: [] };
+            chef.value = chefsData.find(c => c.id == route.params.id) || { name: 'Chef Inconnu', dishes: [] };
         });
   
         const increaseQuantity = (id) => {
@@ -55,6 +52,7 @@
   
         const addToCart = (dish) => {
             cartStore.addToCart(dish, quantities.value[dish.id] || 1);
+            alert('Plat ajouté au panier !');
         };
   
         return { chef, quantities, increaseQuantity, decreaseQuantity, addToCart, authStore };

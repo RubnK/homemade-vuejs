@@ -9,6 +9,7 @@
 <script>
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
+  document.title = 'HomeMade';
 
   export default {
     components: { Header, Footer },
