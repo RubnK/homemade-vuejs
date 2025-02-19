@@ -24,7 +24,7 @@
     import { useRoute } from 'vue-router';
     import { useCartStore } from '../stores/cart';
     import { useAuthStore } from '../stores/auth';
-    import { chefsData } from '../data/chefs';
+    import chefsData from '../assets/chefs.json';
   
     export default {
         props: ['id'],

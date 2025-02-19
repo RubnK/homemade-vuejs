@@ -10,7 +10,7 @@
 </template>
 <script>
     import { ref, onMounted } from 'vue';
-    import { chefsData } from '../data/chefs';
+    import chefsData from '../assets/chefs';
   
     export default {
         setup() {
