@@ -9,6 +9,7 @@ import ChefDetail from './pages/ChefDetail.vue';
 import Login from './pages/Login.vue';
 import Cart from './components/Cart.vue';
 import Register from './pages/Register.vue';
+import Search from './components/Search.vue';
 
 const pinia = createPinia();
 
@@ -27,4 +28,5 @@ const router = createRouter({
 const app = createApp(App);
 app.use(pinia);
 app.use(router);
+app.component('Search', Search);
 app.mount('#app');
